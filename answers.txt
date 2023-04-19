@@ -311,5 +311,76 @@ public class DaysInMonth {
     }
 }
 
-11. 
+11. Array.java
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+//Array.java
+
+public class Array {
+    public static void main(String[] args) {
+        ArrayList<Long> arr = new ArrayList<>();
+        int i = 1;
+        System.out.println("Please enter the array's elements!\nType \"stop\" to end the array");
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.print("Enter the "+i+" element of the array: ");
+            if(!sc.hasNextLong()) break;
+            arr.add(sc.nextLong());
+            i++;
+        }while(true);
+        //Sort the array
+        Collections.sort(arr);
+        System.out.println("The sorted array is: ");
+        long sum = 0;
+        for(int j = 0; j<arr.size(); j++ ){
+            System.out.print(arr.get(j)+ " ");
+            sum+= arr.get(j);
+        }
+        System.out.println("\nThe sum of all element is: "+sum);
+        System.out.println("The average value of all element is: "+(sum/arr.size()));
+    }
+}
+
+12. Matrix.java
+
+import java.util.Scanner;
+
+//Matrix.java
+
+public class Matrix {
+    public static void main(String[] args) {
+        int row, col;
+        int[][] matrix1 = new int[100][100];
+        int[][] matrix2 = new int[100][100];
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of row: ");
+        row = sc.nextInt();
+        System.out.print("Enter number of column: ");
+        col = sc.nextInt();
+        //Enter matrix 1's elements
+        System.out.println("Enter matrix1's elements: ");
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++) {
+                matrix1[i][j] = sc.nextInt();
+            }
+        //Enter matrix 2's elements
+        System.out.println("Enter matrix2's elements: ");
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++) {
+                matrix2[i][j] = sc.nextInt();
+            }
+        //Print out sum of 2 matrix
+        System.out.println("The sum of 2 matrices is: ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print((matrix1[i][j] + matrix2[i][j]) + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
 
