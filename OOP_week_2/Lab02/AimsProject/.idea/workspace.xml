@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f290259b-5cc9-4af4-add9-118baf3cc2d2" name="Changes" comment="Initial" />
+    <list default="true" id="f290259b-5cc9-4af4-add9-118baf3cc2d2" name="Changes" comment="Initial">
+      <change beforePath="$PROJECT_DIR$/../../../Lab03/AimsProject/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="2PtuPCOSbVEFKqaW8aGEei6YLSq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "release/lab03"
   }
 }]]></component>
   <component name="RunManager">
