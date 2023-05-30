@@ -96,15 +96,10 @@ public class DigitalVideoDisc {
         System.out.println("Id: " + nbDigitalVideoDiscs);
     }
     public boolean isMatchTitle(String title) {
-        if(this.getTitle().contains(title)) {
-            return true;
-        } else return false;
+        return this.getTitle().contains(title);
     }
     public boolean isMatchId(int id) {
-        if(this.getId() == id) {
-            return true;
-        }
-        else return false;
+        return this.getId() == id;
     }
 
     public String toString() {

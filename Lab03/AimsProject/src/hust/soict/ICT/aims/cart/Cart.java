@@ -42,7 +42,7 @@ public class Cart {
                 }
             }
             this.qtyOrdered --;
-            DigitalVideoDisc newArr[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+            DigitalVideoDisc[] newArr = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
             for(int i=0, k=0; i<this.qtyOrdered; i++) {
                 if(i == indexRemove) continue;
                 newArr[k++] = this.itemsOrdered[i];

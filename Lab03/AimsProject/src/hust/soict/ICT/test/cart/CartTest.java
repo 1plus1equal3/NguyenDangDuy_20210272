@@ -14,12 +14,13 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd2);
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         cart.addDigitalVideoDisc(dvd3);
+
         //Test the print method
         cart.print();
+
         //To-do: Test the search methods here
-        cart.searchByTitle("Ala");
-        cart.searchByTitle("FFF");
+        cart.searchByTitle("The Lion King");
         cart.searchById(1);
-        cart.searchById(100);
+
     }
 }

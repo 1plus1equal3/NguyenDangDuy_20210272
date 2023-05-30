@@ -15,8 +15,8 @@ public class TestingPassingParameter {
         System.out.println("jungle dvd title: " + jungleDVD.getTitle());
     }
     public static void swap(DigitalVideoDisc o1, DigitalVideoDisc o2) {
-        String title =o1.getTitle();
-        String cate =o1.getCategory();
+        String title = o1.getTitle();
+        String cate = o1.getCategory();
         String Dir = o1.getDirector();
         int len = o1.getLength();
         float cost = o1.getCost();
