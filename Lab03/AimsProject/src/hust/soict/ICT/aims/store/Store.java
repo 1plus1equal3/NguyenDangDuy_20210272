@@ -3,14 +3,13 @@ package hust.soict.ICT.aims.store;
 import hust.soict.ICT.aims.disc.DigitalVideoDisc;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Store {
-    private ArrayList<DigitalVideoDisc> itemInStore = new ArrayList<>();
+    private final ArrayList<DigitalVideoDisc> itemInStore = new ArrayList<>();
 
     public void addDVD(DigitalVideoDisc... dvds) {
-        for(DigitalVideoDisc dvd: dvds) {
-            itemInStore.add(dvd);
-        }
+        Collections.addAll(itemInStore, dvds);
         System.out.println("Added " + itemInStore.size() + " items");
     }
     public void removeDVD(DigitalVideoDisc... dvds) {

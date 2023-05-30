@@ -51,23 +51,31 @@ public class DigitalVideoDisc {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public DigitalVideoDisc(String title, String category, String director) {
         this.title = title;
         this.category = category;
         this.director = director;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(int length) {
         this.length = length;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(float cost) {
         this.cost = cost;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(String title) {
         this.title = title;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
         this.title = title;
@@ -75,25 +83,23 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
-        updateDiscId();
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
     public DigitalVideoDisc(String title, String category, String director, float cost) {
         this.title = title;
         this.category = category;
         this.director = director;
         this.cost = cost;
-        updateDiscId();
-    }
-    public void updateDiscId() {
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
-        System.out.println("Id: " + nbDigitalVideoDiscs);
     }
     public boolean isMatchTitle(String title) {
         return this.getTitle().contains(title);
