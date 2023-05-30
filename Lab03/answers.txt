@@ -1,0 +1,20 @@
+1. Benefits of using varargs in java:
+  -	Varargs simplify method invocations by allowing a flexible number of arguments without explicitly creating an array.
+  -	They provide a convenient way to handle method overloading, reducing code duplication.
+  -	Varargs enable array-like access to the arguments within the method.
+  -	They reduce the complexity of the method signature, making it easier to understand and use.
+  -	Varargs eliminate the need to manually convert multiple arguments into an array for processing.
+  -	They provide a concise and expressive way to pass variable arguments to methods.
+
+#Question: Is JAVA a Pass by Value or a Pass by Reference programming language? 
+Ans: Java is a pass by value language.
+
+2. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+Ans: Because when we pass 2 parameters o1, o2, we actually passing the copy of that object reference so any changes made to the copied values inside the method doesn't affect the original variables.
+
+3. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+Ans: Title of jungleDVD changes since dvd is copied of reference to the object jungledvd and when we call dvd.setTitle method, the title of the dvd at this reference will change. Line “dvd = new DigitalVideoDisc(oldTitle)” only changes copied reference dvd and doesn't affect the original jungle dvd object.
+
+3. Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+Ans: The return type of the “toString” method is String. (A string that modified specifically for displaying the dvd info of the object DigitalVideoDisc)
+
