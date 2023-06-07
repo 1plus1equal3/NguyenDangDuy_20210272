@@ -3,10 +3,11 @@ package hust.soict.ICT.aims.media;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompactDisc extends Media{
+public class CompactDisc extends Media implements Playable {
 
     private String artist;
     private List<Track> tracks = new ArrayList<>();
+
     public CompactDisc() {
     }
 
@@ -32,22 +33,30 @@ public class CompactDisc extends Media{
         return artist;
     }
 
-    public void addTrack(Track track){
-        if(!tracks.contains(track)){
+    public void addTrack(Track track) {
+        if (!tracks.contains(track)) {
             tracks.add(track);
             System.out.println("Added " + track);
-        }else System.out.println("Already have" + track);
+        } else System.out.println("Already have" + track);
     }
 
-    public void removeTrack(Track track){
-        if(tracks.remove(track)){
+    public void removeTrack(Track track) {
+        if (tracks.remove(track)) {
             System.out.println("Remove " + track + "successful");
-        }else System.out.println("Unable to remove " + track);
+        } else System.out.println("Unable to remove " + track);
     }
 
-    public int getLength(){
+    public int getLength() {
         int length = 0;
-        for(Track track: tracks) length+= track.getLength();
+        for (Track track : tracks) length += track.getLength();
         return length;
+    }
+
+    @Override
+    public void play() {
+        for (Track track : tracks) {
+            System.out.println("Playing DVD: " + track.getTitle());
+            System.out.println("DVD length: " + track.getLength());
+        }
     }
 }
