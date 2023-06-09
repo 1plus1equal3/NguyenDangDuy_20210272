@@ -196,17 +196,39 @@ public class Aims {
                 cartMenu();
                 break;
             case 3:
-
+                System.out.println("Pls enter the media's title: ");
+                Scanner sc1 = new Scanner(System.in);
+                String title1 = sc1.next();
+                Media item1 = cart.getByTitle(title1);
+                if(item1 == null) {
+                    System.out.println("No media item found");
+                    storeMenu();
+                    return;
+                }
+                cart.removeMedia(item1);
+                cart.print();
                 cartMenu();
                 break;
 
             case 4:
-
+                System.out.println("Pls enter the media's title: ");
+                Scanner sc2 = new Scanner(System.in);
+                String title2 = sc2.next();
+                Media item2 = cart.getByTitle(title2);
+                if(item2 == null) {
+                    System.out.println("No media item found");
+                    storeMenu();
+                    return;
+                }
+                if(item2 instanceof DigitalVideoDisc)
+                    ((DigitalVideoDisc) item2).play();
+                else if(item2 instanceof CompactDisc)
+                    ((CompactDisc) item2).play();
                 cartMenu();
                 break;
 
             case 5:
-
+                System.out.println("Place order successfully!");
                 cartMenu();
                 break;
             default:
