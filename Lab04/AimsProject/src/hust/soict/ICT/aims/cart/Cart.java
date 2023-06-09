@@ -21,6 +21,10 @@ public class Cart {
         else System.out.println("No " + media.getTitle() + "found");
     }
 
+    public void removeMedia(Media... media){
+        itemsOrdered.removeAll(List.of(media));
+    }
+
     public float totalCost() {
         float sum = 0f;
         for (Media media : itemsOrdered) {
@@ -80,7 +84,12 @@ public class Cart {
         return null;
     }
 
-/*    public void sortByTitle(){
-        itemsOrdered.sort();
-    }*/
+    public void sortByCost(){
+        itemsOrdered.sort(Media.COMPARE_BY_COST);
+    }
+
+    public void sortByTitle(){
+        itemsOrdered.sort(Media.COMPARE_BY_TITLE);
+    }
+
 }

@@ -1,9 +1,13 @@
 package hust.soict.ICT.aims.media;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public abstract class Media {
+
+    public static final Comparator<Media> COMPARE_BY_TITLE = new MediaComparatorByTitleCost();
+    public static final Comparator<Media> COMPARE_BY_COST = new MediaComparatorByCostTitle();
     public Media() {
     }
 
