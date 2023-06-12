@@ -1,6 +1,7 @@
 package hust.soict.ICT.aims.media;
 
 import java.util.Comparator;
+import java.util.function.Function;
 
 public class MediaComparatorByCostTitle implements Comparator<Media> {
 
