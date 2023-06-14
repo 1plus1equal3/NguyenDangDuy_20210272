@@ -10,6 +10,7 @@ public class Cart {
 
     public void addMedia(Media media){
         itemsOrdered.add(media);
+        System.out.println("Add to cart: " + media.getTitle());
     }
 
     public void addMedia(Media... media){
