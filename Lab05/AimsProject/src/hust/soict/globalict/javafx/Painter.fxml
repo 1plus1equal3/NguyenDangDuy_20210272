@@ -11,6 +11,20 @@
             <Insets right="8.0" />
          </BorderPane.margin>
          <children>
+            <TitledPane animated="false" text="Tools">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#penButtonPressed" selected="true" text="Pen">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="identical" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="6.0" layoutY="38.0" mnemonicParsing="false" onAction="#eraserButtonPressed" text="Eraser" toggleGroup="$identical" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
          </children>
       </VBox>
