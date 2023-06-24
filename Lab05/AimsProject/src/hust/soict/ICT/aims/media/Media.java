@@ -75,8 +75,9 @@ public abstract class Media {
 
     @Override
     public boolean equals(Object obj) {
+        if(obj==null) throw new NullPointerException("Object is null!");
         if(obj instanceof Media) return title.equals(((Media) obj).getTitle());
-        else return false;
+        else throw new ClassCastException("This is not a media object!");
     }
 
     public void displayMediaItem(){

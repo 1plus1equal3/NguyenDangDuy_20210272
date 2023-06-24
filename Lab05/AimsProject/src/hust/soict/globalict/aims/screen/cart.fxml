@@ -92,14 +92,14 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label text="0$" textFill="AQUA">
+                  <Label fx:id="totalCost" text="0$" textFill="AQUA">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" style="-fx-background-color: red;" text="Place Order" textFill="WHITE">
+            <Button fx:id="placeOrderBtn" mnemonicParsing="false" onAction="#btnPlaceOrderClick" style="-fx-background-color: red;" text="Place Order" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>

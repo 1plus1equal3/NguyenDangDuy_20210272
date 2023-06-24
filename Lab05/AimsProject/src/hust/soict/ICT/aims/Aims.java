@@ -5,6 +5,7 @@ import hust.soict.ICT.aims.media.DigitalVideoDisc;
 import hust.soict.ICT.aims.cart.Cart;
 import hust.soict.ICT.aims.media.Media;
 import hust.soict.ICT.aims.store.Store;
+import hust.soict.globalict.aims.exception.PlayerException;
 
 import java.util.Scanner;
 
@@ -98,10 +99,20 @@ public class Aims {
                     storeMenu();
                     return;
                 }
-                if(item2 instanceof DigitalVideoDisc)
-                    ((DigitalVideoDisc) item2).play();
-                else if(item2 instanceof CompactDisc)
-                    ((CompactDisc) item2).play();
+                if(item2 instanceof DigitalVideoDisc) {
+                    try {
+                        ((DigitalVideoDisc) item2).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                else if(item2 instanceof CompactDisc) {
+                    try {
+                        ((CompactDisc) item2).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 storeMenu();
                 break;
             case 4:
@@ -138,10 +149,20 @@ public class Aims {
                 mediaDetailsMenu(item);
                 break;
             case 2:
-                if(item instanceof DigitalVideoDisc)
-                    ((DigitalVideoDisc) item).play();
-                else if(item instanceof CompactDisc)
-                    ((CompactDisc) item).play();
+                if(item instanceof DigitalVideoDisc) {
+                    try {
+                        ((DigitalVideoDisc) item).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                else if(item instanceof CompactDisc) {
+                    try {
+                        ((CompactDisc) item).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 mediaDetailsMenu(item);
                 break;
             default:
@@ -220,10 +241,20 @@ public class Aims {
                     storeMenu();
                     return;
                 }
-                if(item2 instanceof DigitalVideoDisc)
-                    ((DigitalVideoDisc) item2).play();
-                else if(item2 instanceof CompactDisc)
-                    ((CompactDisc) item2).play();
+                if(item2 instanceof DigitalVideoDisc) {
+                    try {
+                        ((DigitalVideoDisc) item2).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                else if(item2 instanceof CompactDisc) {
+                    try {
+                        ((CompactDisc) item2).play();
+                    } catch (PlayerException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
                 cartMenu();
                 break;
 
